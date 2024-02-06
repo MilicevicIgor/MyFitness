@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dobrodošao</h1>
+
+<form method="post" action="/user/edit/membership">
+    <label for="membershipName">Iznos uplate:</label>
+    <input type="text" id="membershipName" name="iznosUplate" required>
+    <button type="submit">Dodaj članarinu</button>
+</form>
+
+<form method="post" action="/user/edit/membership/{id}">
+    <label for="membershipId">ID članarine za brisanje:</label>
+    <input type="text" id="membershipId" name="id" required>
+    <button type="submit">Obriši članarinu</button>
+</form>
+
+
+</body>
+</html>

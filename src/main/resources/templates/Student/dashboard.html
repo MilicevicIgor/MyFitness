@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Članska stranica</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Dobrodošli!</h1>
+  <form th:action="@{/logout}" method="post">
+    <button type="submit" class="btn btn-danger">Odjavi se</button>
+  </form>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Moje članarine</h5>
+      <p class="card-text">Proba test</p>
+      <a href="membership" class="btn btn-primary">Pregled članarina</a>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Moje vježbe</h5>
+      <p class="card-text"></p>
+      <a href="exercises" class="btn btn-primary">Pregled vježbi</a>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Moja ishrana</h5>
+      <p class="card-text">Pregledajte ishrane.</p>
+      <a href="/Student/lunch" class="btn btn-primary">Pregled ishrane</a>
+    </div>
+  </div>
+
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

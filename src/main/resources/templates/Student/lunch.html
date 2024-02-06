@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lunch</title>
+</head>
+<body>
+<h1>Dobrodosli</h1>
+
+<table class="table">
+    <tr th:each="lunch : ${lunch}">
+        <td th:text="${lunch.description}"></td>
+
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Page</title>
+</head>
+<body>
+<h1>Dobrodošli</h1>
+<table class="table">
+    <tr>
+        <th>Datum Uplate</th>
+        <th>Iznos Uplate</th>
+    </tr>
+    <tr th:each="membership : ${memberships}">
+        <td th:text="${membership.datumUplate}">Datum Uplate</td>
+        <td th:text="${membership.iznosUplate}">Iznos Uplate</td>
+    </tr>
+</table>
+
+</body>
+</html>

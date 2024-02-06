@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+<h1>Dobrodošli</h1>
+
+<table class="table">
+    <tr th:each="exercise : ${exercises}">
+        <td>
+            <a th:href="@{${exercise.youtubeLink}}" th:text="${exercise.youtubeLink}" >Vjezbe</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
