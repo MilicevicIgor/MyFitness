@@ -4,7 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership Page</title>
+    <link rel="website icon" type="jpg" href="Logo.jpg">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        body {
+            padding: 20px;
+        }
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #24e802;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
+
 <body>
 <h1>Dobrodošli</h1>
 <table class="table">
@@ -17,6 +47,5 @@
         <td th:text="${membership.iznosUplate}">Iznos Uplate</td>
     </tr>
 </table>
-
 </body>
 </html>

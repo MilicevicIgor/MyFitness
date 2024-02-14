@@ -14,10 +14,16 @@ public class Exercises {
     private Long id;
     private String name;
     private String youtubeLink;
+    private long id_usera;
+
 
 
     public Long getId() {
         return id;
+    }
+
+    public long getId_usera() {
+        return id_usera;
     }
 
     public String getName() {

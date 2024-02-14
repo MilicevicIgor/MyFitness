@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFitness</title>
+    <link rel="website icon" type="jpg" href="/Static/images/Logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link th:href="@{Static/css/style.css}" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+        .pre-header{
+            background-color: rgb(0, 0, 0);
+            height: 60px;
+            color: greenyellow;
+            padding-top: 20px;
+        }
+
+
+        .main-menu{
+            list-style: none;
+        }
+        .main-menu {
+            text-align: right;
+        }
+
+
+
+
+        .pre-header .main-menu li{
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .pre-header .main-menu li a{
+            color: #707374;
+            text-transform: uppercase;
+        }
+
+        .main-nav .col-md-6 img {
+            width: 20%;
+            height: auto;
+            border-radius: 50px;
+            margin-right: 50px;
+        }
+
+        .main-nav .navigation-menu{
+            list-style: none;
+            margin-top: 35px;
+        }
+
+        .main-nav .navigation-menu li{
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .main-nav .navigation-menu li a{
+            color: #767676;
+            text-transform: uppercase;
+        }
+
+        .hero-section{
+            background-image: url('../images/Sl.2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            padding-top: 200px;
+            padding-bottom: 100px;
+
+        }
+
+        .hero-section h1{
+            color: #24e802;
+        }
+        .hero-section p{
+            color:#24e802;
+        }
+        #about-section {
+            margin-top: 200px;
+        }
+
+        .text {
+            color: #24e802;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header>
+
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    Welcome
+                </div>
+                <div class="col-md-2 ">
+                    <ul class="main-menu">
+                        <li class="col-md-2">
+                            <a href="../users/login.html">Login</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/Static/images/Logo.jpg"  alt="">
+                </div>
+
+                <div class="col-md-6">
+
+                    <ul class="navigation-menu">
+                        <li><a href="#"> Home </a></li>
+                        <li><a href="#about-section">About us</a></li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+<div class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h1>GO HARD OR GO HOME</h1>
+                <p>If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have found the safest way to health.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about-section" class="text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Web aplikacija se sastoji od:</h1>
+                <p>1.Prijava člana teretane sa njegovim osobnim podatcima. Član vidi visinu članarine i datum uplate.</p>
+                <p> 2. U drugom izborniku sukladno zahtjevu člana postavljen je plan ishrane.</p>
+                <p> 3. U trećem izborniku  sukladno zahtjevu člana trener pravi plan vježbi.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

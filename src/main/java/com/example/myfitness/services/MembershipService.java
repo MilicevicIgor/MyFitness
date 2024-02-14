@@ -13,13 +13,9 @@ public class MembershipService {
     @Autowired
     private MembershipRepository membershipRepository;
 
-    public List<Membership> getAllMemberships() {
-        return membershipRepository.findAll();
+    public List<Membership> getMembershipsByUserId(Long userId) {
+        return membershipRepository.findByUserId(userId);
     }
-    public Optional<Membership> getMembershipsById(Long studentId) {
-        return membershipRepository.findById(studentId);
-    }
-
 
     public void addMembership(Membership membership) {
         membershipRepository.save(membership);

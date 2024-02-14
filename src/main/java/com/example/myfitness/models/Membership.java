@@ -20,7 +20,6 @@ public class Membership {
     private long id_usera;
 
     @ManyToOne
-    //@JoinColumn(name="id_usera", nullable = false)
     private User student;
 
 
@@ -35,9 +34,6 @@ public class Membership {
     }
 
     // Getteri i setteri
-    /*public void setStudent(User student){
-
-    }*/
 
     public User getStudent() {
         return student;

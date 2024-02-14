@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lunch</title>
+    <title>Lunch Page</title>
+    <link rel="website icon" type="jpg" href="Logo.jpg">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        h1 {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #24e802;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+    </style>
 </head>
 <body>
-<h1>Dobrodosli</h1>
-
+<h1>Dobrodošli</h1>
 <table class="table">
     <tr th:each="lunch : ${lunch}">
         <td th:text="${lunch.description}"></td>
 
     </tr>
 </table>
-
 </body>
 </html>

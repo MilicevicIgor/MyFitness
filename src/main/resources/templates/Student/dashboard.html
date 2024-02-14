@@ -3,37 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Članska stranica</title>
+  <link rel="website icon" type="jpg" href="Logo.jpg">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .card {
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card-title, .card-text{
+      color: #24e802;
+    }
+    .btn-custom {
+      background-color: #24e802;
+      border-color: #24e802;
+    }
+    .btn-custom:hover {
+      background-color: #24e802;
+      border-color: #24e802;
+    }
+  </style>
 </head>
 <body>
 <div class="container mt-4">
-  <h1>Dobrodošli!</h1>
-  <form th:action="@{/logout}" method="post">
+  <h1 class="text-center text-success">Dobrodošli!</h1>
+  <form th:action="@{/logout}" method="post" class="text-center">
     <button type="submit" class="btn btn-danger">Odjavi se</button>
   </form>
-  <div class="card mt-3">
+  <div class="card">
     <div class="card-body">
       <h5 class="card-title">Moje članarine</h5>
-      <p class="card-text">Proba test</p>
-      <a href="membership" class="btn btn-primary">Pregled članarina</a>
+      <a href="membership" class="btn btn-custom">Pregled članarina</a>
     </div>
   </div>
-  <div class="card mt-3">
+  <div class="card">
     <div class="card-body">
       <h5 class="card-title">Moje vježbe</h5>
       <p class="card-text"></p>
-      <a href="exercises" class="btn btn-primary">Pregled vježbi</a>
+      <a href="exercises" class="btn btn-custom">Pregled vježbi</a>
     </div>
   </div>
-  <div class="card mt-3">
+  <div class="card">
     <div class="card-body">
       <h5 class="card-title">Moja ishrana</h5>
-      <p class="card-text">Pregledajte ishrane.</p>
-      <a href="/Student/lunch" class="btn btn-primary">Pregled ishrane</a>
-    </div>
-  </div>
-
-</div>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+      <a href="/Student/lunch" class="btn btn-custom">Pregled ishrane</a>

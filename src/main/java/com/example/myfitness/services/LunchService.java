@@ -2,6 +2,7 @@
 
     // LunchService.java
     import com.example.myfitness.models.Lunch;
+    import com.example.myfitness.models.Membership;
     import com.example.myfitness.repositories.LunchRepository;
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.stereotype.Service;
@@ -18,6 +19,10 @@
         public List<Lunch> getAllLunches() {
             return lunchRepository.findAll();
         }
+        public List<Lunch> getLunchByUserId(Long userId) {
+            return lunchRepository.findByUserId(userId);
+        }
+
 
         public Lunch getLunchById(Long id) {
             return lunchRepository.findById(id).orElse(null);

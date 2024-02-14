@@ -2,8 +2,12 @@ package com.example.myfitness.controllers;
 
 
 import com.example.myfitness.models.Lunch;
+import com.example.myfitness.models.Membership;
+import com.example.myfitness.models.UserDetails;
 import com.example.myfitness.services.LunchService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +21,12 @@ public class LunchController {
     @Autowired
     private LunchService lunchService;
 
+
     @GetMapping("/lunch")
-    public String getAllLunch(Model model) {
-        List<Lunch> lunches = lunchService.getAllLunches();
+    public String showLunchPage(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        List<Lunch> lunches = lunchService.getLunchByUserId(userDetails.getUser().getId());
         model.addAttribute("lunch", lunches);
         return "Student/lunch";
     }
